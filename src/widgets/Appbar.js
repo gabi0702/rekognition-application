@@ -29,7 +29,9 @@ const Appbar = () => {
             <Link class="btn" to="/customers">
               Customers
             </Link>
-
+            <Link class="btn" to="/visitors">
+              Visitors
+            </Link>
             <Link class="btn" to="/rekognition">
               Rekognition
             </Link>
