@@ -6,8 +6,8 @@ import {
 } from "react-router-dom";
 
 import Home from "./pages/Home";
-import Products from "./pages/Products";
-import Categories from "./pages/Categories";
+import Places from "./pages/Places";
+import Customers from "./pages/Customers";
 import NotFound from "./pages/NotFound";
 import "./App.css";
 import RekognitionPage from "./pages/RekognitionPage";
@@ -15,8 +15,8 @@ import RekognitionPage from "./pages/RekognitionPage";
 const routeDefinitions = createRoutesFromElements(
   <Route>
     <Route path="/" element={<Home />} />
-    <Route path="/products" element={<Products />} />
-    <Route path="/categories" element={<Categories />} />
+    <Route path="/places" element={<Places />} />
+    <Route path="/customers" element={<Customers />} />
     <Route path="/rekognition" element={<RekognitionPage />} />
 
     <Route path="*" element={<NotFound />} />

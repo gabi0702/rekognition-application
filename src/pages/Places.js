@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import Appbar from "../widgets/Appbar";
-const Products = () => {
+const Places = () => {
   return (
     <>
-      <div>PRODUCTS PAGE</div>
       <Appbar />
+      <div>Places PAGE</div>
     </>
   );
 };
 
-export default Products;
+export default Places;

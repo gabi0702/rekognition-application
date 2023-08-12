@@ -67,42 +67,44 @@ function RekognitionPage() {
       .catch((error) => console.log(error));
   }
   return (
-    <div className="App">
-      <Appbar />
-      <h2>Facial Rekognition System</h2>
-      <form onSubmit={sendImage}>
-        <div id="marg">
-          <label for="images" className="drop-container" id="dropcontainer">
-            <input
-              type="file"
-              name="image"
-              id="images"
-              accept="image/*"
-              required
-              onChange={(e) => setImage(e.target.files[0])}
-            ></input>
-          </label>
+    <>
+      <div className="App">
+        <Appbar />
+        <h2>Facial Rekognition System</h2>
+        <form onSubmit={sendImage}>
+          <div id="marg">
+            <label for="images" className="drop-container" id="dropcontainer">
+              <input
+                type="file"
+                name="image"
+                id="images"
+                accept="image/*"
+                required
+                onChange={(e) => setImage(e.target.files[0])}
+              ></input>
+            </label>
+          </div>
+
+          <button type="submit" className="button-9">
+            Authenticate
+          </button>
+        </form>
+        <div className={isAuth ? "success" : "failure"}>
+          {uploadResultMessage}
         </div>
 
-        <button type="submit" className="button-9">
-          Authenticate
-        </button>
-      </form>
-      <div className={isAuth ? "success" : "failure"}>
-        {uploadResultMessage}
+        {imgName === "placeholder.jpeg" ? (
+          <div></div>
+        ) : (
+          <img
+            src={require(`../visitors/${imgName}`)}
+            alt="Visitor"
+            height={150}
+            width={150}
+          />
+        )}
       </div>
-
-      {imgName === "placeholder.jpeg" ? (
-        <div></div>
-      ) : (
-        <img
-          src={require(`../visitors/${imgName}`)}
-          alt="Visitor"
-          height={150}
-          width={150}
-        />
-      )}
-    </div>
+    </>
   );
 }
 
