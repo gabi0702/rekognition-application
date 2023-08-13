@@ -87,3 +87,45 @@
 	align-items: center;
 	align-content: stretch;
 }
+
+input[type=text] {
+	appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: .2em solid;
+	/* background: rgba(#6c1ee9, .2); */
+	border-radius: .2em .2em 0 0;
+	padding: .4em;
+	/* color: #6c1ee9; */
+}
+
+ input[type=file] {
+	display: grid;
+	grid-auto-flow: column;
+	grid-gap: .5em;
+	justify-items: center;
+	align-content: center;
+	/* color: #6c1ee9; */
+	border: .2em solid ;
+	background: hsl(0 0 0/0);
+	padding: .85em 1.5em;
+	/* color: #6c1ee9; */
+	border-radius: 2em;
+	transition: 1s;
+	&:hover, &:focus, &:active {
+		/* background: #6c1ee9; */
+		color: #fff;
+	}
+}
+
+#dv-ctn{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: center;
+}
+.dist{
+    margin: 10px;
+}

@@ -6,6 +6,8 @@ import Appbar from "../widgets/Appbar";
 const Customers = () => {
   const [showModal, setShowModal] = useState(false);
   const [customerName, setCustomerName] = useState("");
+  const [customerFirstName, setCustomerFirstName] = useState("");
+  const [customerLastName, setCustomerLastName] = useState("");
   const [customerPhoto, setCustomerPhoto] = useState("");
   const [customers, setCustomers] = useState([]);
 
@@ -21,7 +23,7 @@ const Customers = () => {
     e.preventDefault();
     // Create a new customer object
     const newCustomer = {
-      name: customerName,
+      name: customerFirstName.concat(" ").concat(customerLastName),
       photo: customerPhoto,
     };
 
@@ -73,24 +75,44 @@ const Customers = () => {
             <div className="popup-content">
               <h2>Add New Customer</h2>
               <form onSubmit={handleSubmit}>
-                <label htmlFor="customerName">Customer Name:</label>
-                <input
-                  type="text"
-                  id="customerName"
-                  value={customerName}
-                  onChange={(e) => setCustomerName(e.target.value)}
-                  required
-                />
-                <label htmlFor="customerPhoto">Customer Photo:</label>
-                <input
-                  type="file"
-                  id="customerPhoto"
-                  onChange={(e) =>
-                    setCustomerPhoto(URL.createObjectURL(e.target.files[0]))
-                  }
-                  accept="image/*"
-                  required
-                />
+                <div>
+                  <label htmlFor="customerName">Customer First Name:</label>
+                  <input
+                    placeholder="John"
+                    type="text"
+                    id="customerName"
+                    // value={customerName}
+                    onChange={(e) => setCustomerFirstName(e.target.value)}
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="customerName">Customer Last Name:</label>
+                  <input
+                    placeholder="Doe"
+                    type="text"
+                    id="customerName"
+                    // value={customerName}
+                    onChange={(e) => setCustomerLastName(e.target.value)}
+                    required
+                  />
+                </div>
+                <div id="dv-ctn">
+                  <div className="dist">
+                    <label htmlFor="customerPhoto">Customer Photo:</label>
+                  </div>
+                  <div className="dist">
+                    <input
+                      type="file"
+                      id="customerPhoto"
+                      onChange={(e) =>
+                        setCustomerPhoto(URL.createObjectURL(e.target.files[0]))
+                      }
+                      accept="image/*"
+                      required
+                    />
+                  </div>
+                </div>
                 <button type="submit" className="btn">
                   Add Customer
                 </button>

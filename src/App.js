@@ -18,7 +18,6 @@ const routeDefinitions = createRoutesFromElements(
     <Route path="/" element={<Home />} />
     <Route path="/places" element={<Places />} />
     <Route path="/visitors" element={<Visitors />} />
-
     <Route path="/customers" element={<Customers />} />
     <Route path="/rekognition" element={<RekognitionPage />} />
 
