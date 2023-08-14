@@ -12,18 +12,20 @@ const Home = () => {
             At BE FIT Pilates Institute, we are dedicated to helping you achieve
             your fitness goals...
           </p>
-          <Link class="btn">Read More</Link>
+          <Link to="/about" class="btn">
+            Read More
+          </Link>
         </div>
       </section>
       <section class="classes">
         <div class="classes-content">
-          <h2>Our Classes</h2>
+          <h2>Our Places</h2>
           <p>
             Choose from a variety of Pilates classes designed to meet your
             fitness needs...
           </p>
-          <Link href="#" class="btn">
-            View Classes
+          <Link to="/places" class="btn">
+            View Places
           </Link>
         </div>
       </section>
@@ -35,7 +37,7 @@ const Home = () => {
             Our experienced instructors are dedicated to helping you achieve
             your fitness goals...
           </p>
-          <Link href="#" class="btn">
+          <Link to="/instructors" class="btn">
             Meet the Instructors
           </Link>
         </div>
@@ -45,7 +47,7 @@ const Home = () => {
         <div class="contact-content">
           <h2>Contact Us</h2>
           <p>Have questions or want to get started? Reach out to us today...</p>
-          <Link href="#" class="btn">
+          <Link to="/contactus" class="btn">
             Contact Us
           </Link>
         </div>

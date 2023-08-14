@@ -21,11 +21,9 @@ const Appbar = () => {
             <Link class="btn" to="/">
               Home
             </Link>
-
             <Link class="btn" to="/places">
               Our Places
             </Link>
-
             <Link class="btn" to="/customers">
               Customers
             </Link>
@@ -34,6 +32,9 @@ const Appbar = () => {
             </Link>
             <Link class="btn" to="/rekognition">
               Rekognition
+            </Link>
+            <Link class="btn" to="/about">
+              About Us
             </Link>
 
             {/* 

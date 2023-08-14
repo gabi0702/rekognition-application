@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { React, useState } from "react";
 import "./Customers.css";
 import Appbar from "../widgets/Appbar";
+import GuestbookComponent from "../widgets/GuestbookComponent";
 
 const Customers = () => {
   const [showModal, setShowModal] = useState(false);
@@ -69,6 +70,7 @@ const Customers = () => {
               ))}
             </tbody>
           </table>
+          <GuestbookComponent />
         </div>
         {showModal && (
           <div className="popup">
