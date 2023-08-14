@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import React from "react";
 import "../pages/Home.css";
 import logo from "../img/logo.png";
+
 const Appbar = () => {
+  const location = useLocation();
+
   return (
     <>
-      <header class="header">
+      <header className="header">
         <div className="dv-center">
           <Link to="/">
             <img
@@ -17,30 +20,53 @@ const Appbar = () => {
             />
           </Link>
 
-          <nav class="top-nav">
-            <Link class="btn" to="/">
+          <nav className="top-nav">
+            <Link
+              className={`btn ${location.pathname === "/" ? "active" : ""}`}
+              to="/"
+            >
               Home
             </Link>
-            <Link class="btn" to="/places">
+            <Link
+              className={`btn ${
+                location.pathname === "/places" ? "active" : ""
+              }`}
+              to="/places"
+            >
               Our Places
             </Link>
-            <Link class="btn" to="/customers">
+            <Link
+              className={`btn ${
+                location.pathname === "/customers" ? "active" : ""
+              }`}
+              to="/customers"
+            >
               Customers
             </Link>
-            <Link class="btn" to="/visitors">
+            <Link
+              className={`btn ${
+                location.pathname === "/visitors" ? "active" : ""
+              }`}
+              to="/visitors"
+            >
               Visitors
             </Link>
-            <Link class="btn" to="/rekognition">
+            <Link
+              className={`btn ${
+                location.pathname === "/rekognition" ? "active" : ""
+              }`}
+              to="/rekognition"
+            >
               Rekognition
             </Link>
-            <Link class="btn" to="/about">
+            <Link
+              className={`btn ${
+                location.pathname === "/about" ? "active" : ""
+              }`}
+              to="/about"
+            >
               About Us
             </Link>
-
-            {/* 
-          <Link class="btn" to="/notFound">
-            Not Found
-          </Link> */}
           </nav>
         </div>
       </header>
