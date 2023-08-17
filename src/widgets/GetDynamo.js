@@ -14,10 +14,9 @@ function GetDynamo() {
 
   const fetchEntries = async () => {
     try {
-      const response = await axios.get(API_URL);
-
-      console.log("response: ", response);
-      setEntries(response.data.Items);
+      //   const response = await axios.get(API_URL);
+      //   console.log("response: ", response);
+      //   setEntries(response.data.Items);
     } catch (error) {
       console.error("Error fetching entries:", error);
     }
