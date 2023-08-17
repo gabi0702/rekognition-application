@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import React from "react";
 import Appbar from "../widgets/Appbar";
 const Instructors = () => {
@@ -12,7 +11,6 @@ const Instructors = () => {
             At BE FIT Pilates Institute, we are dedicated to helping you achieve
             your fitness goals...
           </p>
-          <Link class="btn">.........</Link>
         </div>
       </section>
 

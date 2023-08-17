@@ -1,6 +1,22 @@
 .btn{
     margin: 20px;
 }
+.btn-add-cust{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px;
+}
 /* Popup/Modal */
 .popup {
     display: none;
@@ -62,7 +78,7 @@
     font-size: 14px;
 }
 
-#customerForm button[type="submit"] {
+/* #customerForm button[type="submit"] {
     display: inline-block;
     padding: 10px 20px;
     background-color: #333;
@@ -72,11 +88,11 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
-}
+} */
 
-#customerForm button[type="submit"]:hover {
+/* #customerForm button[type="submit"]:hover {
     background-color: #555;
-}
+} */
 
 /* ... Previous CSS styles ... */
 .customers-header{
@@ -128,4 +144,45 @@ input[type=text] {
 }
 .dist{
     margin: 10px;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+
+  .delete-btn{
+    border: 0px;
+  }
+
+  .delete-btn :hover{
+    cursor: pointer;
+}
+
+#export-btn{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px;
+}
+.dv-cont{
+    margin-top: 17px;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
 }
