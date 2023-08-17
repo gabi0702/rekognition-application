@@ -35,8 +35,9 @@ const Home = () => {
         <div className="about-content">
           <h2>About Us</h2>
           <p>
-            At BE FIT Pilates Institute, we are dedicated to helping you achieve
-            your fitness goals...
+            At BeFit Pilates Center, nestled in the heart of Kiryat Malachi,
+            Israel, we are dedicated to helping you discover the transformative
+            power of Pilates.
           </p>
           <Link to="/about" className="btn">
             Read More
@@ -44,7 +45,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="instructors">
+      {/* <section className="instructors">
         <div className="instructors-content">
           <h2>Meet Our Instructors</h2>
           <p>
@@ -55,7 +56,7 @@ const Home = () => {
             Meet the Instructors
           </Link>
         </div>
-      </section>
+      </section> */}
 
       <section className="contact">
         <div className="contact-content">

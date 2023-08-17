@@ -27,14 +27,14 @@ const Appbar = () => {
             >
               Home
             </Link>
-            <Link
+            {/* <Link
               className={`btn ${
                 location.pathname === "/places" ? "active" : ""
               }`}
               to="/places"
             >
               Our Places
-            </Link>
+            </Link> */}
             <Link
               className={`btn ${
                 location.pathname === "/customers" ? "active" : ""

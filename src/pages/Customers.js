@@ -43,7 +43,6 @@ const Customers = () => {
     // Close the modal
     closeModal();
   };
-
   const handleDeleteCustomer = (index) => {
     const newData = [...customers]; // Create a new array using the spread operator
     newData.splice(index, 1); // Remove the element at the specified index
