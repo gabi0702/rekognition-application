@@ -24,16 +24,29 @@ const ContactUs = () => {
     setPhone(event.target.value);
   };
   const [thanks, setThanks] = useState("");
+  const [fill, setFill] = useState("");
 
   const handleSend = () => {
-    setThanks("Your request as been sent! We will be in touch shortly!");
-    // You can implement sending logic here
-    console.log("Sending:", name, email, phone);
-    // Clear fields and close popup
-    setName("");
-    setEmail("");
-    setPhone("");
-    togglePopup();
+    if (name === "" || email === "" || phone === "") {
+      setFill("Please fill all the fields in the form.");
+
+      // After 5 seconds, replace the text with an empty string
+      const timeout = setTimeout(() => {
+        setFill("");
+      }, 3000);
+
+      // Clean up the timeout when the component unmounts or when the effect re-runs
+      return () => clearTimeout(timeout);
+    } else {
+      setThanks("Your request as been sent! We will be in touch shortly!");
+      // You can implement sending logic here
+      console.log("Sending:", name, email, phone);
+      // Clear fields and close popup
+      setName("");
+      setEmail("");
+      setPhone("");
+      togglePopup();
+    }
   };
 
   return (
@@ -49,6 +62,7 @@ const ContactUs = () => {
           onChange={handleNameChange}
           className="contact-input"
         />
+
         <input
           type="email"
           placeholder="Email"
@@ -67,6 +81,7 @@ const ContactUs = () => {
           Send
         </button>
         <div>{thanks}</div>
+        <div id="err">{fill}</div>
       </div>
 
       <div className="footer-container">
