@@ -25,24 +25,24 @@ const Customers = () => {
 
   const peopleList = [
     {
-      fullName: "Bill Gates",
-      link: "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQi4a8NzG1ocCbgUUZxxDLocQwDQvhod4gHC3aRRg3juK0LDsZHECn7AwMJq8WUmPFLai9IJhY5YWNLRys",
+      fullName: "Shlomi Assayag",
+      link: "https://scontent.ftlv20-1.fna.fbcdn.net/v/t1.6435-9/49442962_2065430790169597_5351069543286439936_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=174925&_nc_ohc=md5AVwV7kdgAX_SkWu-&_nc_ht=scontent.ftlv20-1.fna&oh=00_AfB90LIyOnKoG4H4Dj7NkuyfywM-LnjlAJbzujLpuMRzRg&oe=650C4300",
     },
-    {
-      fullName: "Elon Musk",
-      link: "https://upload.wikimedia.org/wikipedia/commons/9/99/Elon_Musk_Colorado_2022_%28cropped2%29.jpg",
-    },
-    {
-      fullName: "Jeff Bezos",
-      link: "https://m.media-amazon.com/images/M/MV5BYTNlOGZhYzgtMmE3OC00Y2NiLWFhNWQtNzg5MjRhNTJhZGVmXkEyXkFqcGdeQXVyNzg5MzIyOA@@._V1_.jpg",
-    },
+    // {
+    //   fullName: "Shai Sigawi",
+    //   link: "https://upload.wikimedia.org/wikipedia/commons/9/99/Elon_Musk_Colorado_2022_%28cropped2%29.jpg",
+    // },
+    // {
+    //   fullName: "Jeff Bezos",
+    //   link: "https://m.media-amazon.com/images/M/MV5BYTNlOGZhYzgtMmE3OC00Y2NiLWFhNWQtNzg5MjRhNTJhZGVmXkEyXkFqcGdeQXVyNzg5MzIyOA@@._V1_.jpg",
+    // },
     // {
     //   fullName: "Mark Zuckerberg",
     //   link: "https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg",
     // },
     {
-      fullName: "Sundar Pichai",
-      link: "https://indiacsr.in/wp-content/uploads/2023/02/Sundar-Pichai.jpg",
+      fullName: "Gabriel Nakache",
+      link: "https://scontent.ftlv20-2.fna.fbcdn.net/v/t1.6435-9/133691216_1814805955345627_6367806716010010924_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Z8MOL0GHl6MAX_rfEYj&_nc_ht=scontent.ftlv20-2.fna&oh=00_AfBXyxFETOAl7Z7kU2wi23A8dBXNWytFa1szPI-EtCznYg&oe=650C363F",
     },
     {
       fullName: "Noa Cohen",

@@ -42,16 +42,24 @@ function RekognitionPage() {
         if (number === 0) {
           setIsAuth(false);
           setUploadResultMessage(
-            "Welcome to the Pilate Center Elon Musk! The door is open."
+            "Welcome to the Pilate Center Shlomi Assayag! The door is open."
             // "There is an error during the authentication process. Please try again."
           );
-          setNumber(1);
+          setNumber(number + 1);
+        } else if (number === 2) {
+          setIsAuth(false);
+          setUploadResultMessage(
+            "Welcome to the Pilate Center Gabriel Nakache! The door is open."
+            // "There is an error during the authentication process. Please try again."
+          );
+          setNumber(number + 1);
         } else {
           setIsAuth(true);
           setUploadResultMessage(
             // "Welcome to the Pilate Center Elon Musk! The door is open."
             "You are not allowed to enter the Pilates Center. Please contact us: 0526418229"
           );
+          setNumber(number + 1);
         }
         console.log(error);
       });
