@@ -4,6 +4,12 @@ import * as XLSX from "xlsx";
 import deleteIcon from "../img/delete-icon.png";
 
 import "./Customers.css";
+import image1 from "../visitors/Bill_Gates.jpeg";
+import image2 from "../visitors/Elon_Musk.jpeg";
+import image3 from "../visitors/Jeff_Bezos.jpg";
+import image4 from "../visitors/Mark_Zuckerberg.jpeg";
+import image5 from "../visitors/Sundar_Pichai.jpeg";
+
 import Appbar from "../widgets/Appbar";
 import GuestbookComponent from "../widgets/GuestbookComponent";
 import AddCustomerPopUp from "../widgets/AddCustomerPopUp";
@@ -18,6 +24,26 @@ const Customers = () => {
   const [customers, setCustomers] = useState([]);
 
   const peopleList = [
+    {
+      fullName: "Bill Gates",
+      link: "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQi4a8NzG1ocCbgUUZxxDLocQwDQvhod4gHC3aRRg3juK0LDsZHECn7AwMJq8WUmPFLai9IJhY5YWNLRys",
+    },
+    {
+      fullName: "Elon Musk",
+      link: "https://upload.wikimedia.org/wikipedia/commons/9/99/Elon_Musk_Colorado_2022_%28cropped2%29.jpg",
+    },
+    {
+      fullName: "Jeff Bezos",
+      link: "https://m.media-amazon.com/images/M/MV5BYTNlOGZhYzgtMmE3OC00Y2NiLWFhNWQtNzg5MjRhNTJhZGVmXkEyXkFqcGdeQXVyNzg5MzIyOA@@._V1_.jpg",
+    },
+    // {
+    //   fullName: "Mark Zuckerberg",
+    //   link: "https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg",
+    // },
+    {
+      fullName: "Sundar Pichai",
+      link: "https://indiacsr.in/wp-content/uploads/2023/02/Sundar-Pichai.jpg",
+    },
     {
       fullName: "Noa Cohen",
       link: "https://scontent.ftlv20-2.fna.fbcdn.net/v/t39.30808-6/367976001_3686788338217754_4650446034240777136_n.jpg?stp=cp6_dst-jpg_p526x296&_nc_cat=101&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=QGG-H2AFgSkAX8xSo4m&_nc_ht=scontent.ftlv20-2.fna&oh=00_AfCRmFVbOKgd8AsSGP8FZ0uN9Vb_Jrcq4G4bSsyxaqMUUA&oe=64E4BFE4",
@@ -52,7 +78,7 @@ const Customers = () => {
     },
     {
       fullName: "Shira Malka",
-      link: "https://scontent.ftlv20-1.fna.fbcdn.net/v/t39.30808-6/331550262_679097353997178_2742179908247848956_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=SXphlw7cNuAAX88psEg&_nc_ht=scontent.ftlv20-1.fna&oh=00_AfDLr3EnUokLpvtbhBC8JnomZUEBcxzuo9qzIcKeWXsEjw&oe=64E46DEF",
+      link: "https://scontent.ftlv20-1.fna.fbcdn.net/v/t39.30808-6/331550262_679097353997178_2742179908247848956_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Z7WfVsbO6YYAX9AGEbs&_nc_ht=scontent.ftlv20-1.fna&oh=00_AfDVAbE8yU6tqX3YVENWMM2_d02V9bYSQZS7qBXi5VAXYQ&oe=64EA5CAF",
     },
     {
       fullName: "Rinat Cohen",
@@ -60,7 +86,7 @@ const Customers = () => {
     },
     {
       fullName: "Michal Abramov",
-      link: "https://scontent.ftlv20-1.fna.fbcdn.net/v/t39.30808-6/337291000_525607999733278_5896930418319764304_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=riLL08yn-g8AX-jpdte&_nc_ht=scontent.ftlv20-1.fna&oh=00_AfBMf-0RPDZTiM48pa5tjxqd6rStDH5VG6CxDkTw4RKhtQ&oe=64E4BE6C",
+      link: "https://scontent.ftlv20-1.fna.fbcdn.net/v/t39.30808-6/337291000_525607999733278_5896930418319764304_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=1ivpLD2Ap-EAX-7kfMV&_nc_ht=scontent.ftlv20-1.fna&oh=00_AfDt4hpX43XeZhIcQ0z-Vc-nRZXuLU8KIBCTPSTQWzUXzw&oe=64EAAD2C",
     },
     {
       fullName: "Galit Cohen",
@@ -205,6 +231,9 @@ const Customers = () => {
                 </tr>
               </thead>
               <tbody>
+                <GetDynamo />
+                <div></div>
+
                 {peopleList.map((person, index) => (
                   <tr key={index}>
                     <td>{person.fullName}</td>

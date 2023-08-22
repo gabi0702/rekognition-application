@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import ByteToImageConverter from "./ByteToImageConverter";
+import ByteToImage from "./test1";
 const API_URL =
-  "https://8a1jmkofhl.execute-api.us-east-1.amazonaws.com/prod/number";
+  "https://sdlhkn3z98.execute-api.us-east-1.amazonaws.com/prod/fetch-data";
 
 function GetDynamo() {
   const [entries, setEntries] = useState([]);
-  const [message, setMessage] = useState("");
 
   useEffect(() => {
     fetchEntries();
@@ -16,38 +16,32 @@ function GetDynamo() {
     try {
       const response = await axios.get(API_URL);
       console.log("response: ", response);
-      setEntries(response.data.Items);
+      setEntries(response.data.items);
     } catch (error) {
       console.error("Error fetching entries:", error);
     }
   };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await axios.post(API_URL, { message });
-      setMessage("");
-      fetchEntries();
-    } catch (error) {
-      console.error("Error submitting entry:", error);
-    }
-  };
+  function byteArrayToDataURL(byteArray) {
+    const blob = new Blob([byteArray], { type: "image/png" }); // Change the MIME type as needed
+    const dataURL = URL.createObjectURL(blob);
+    return dataURL;
+  }
 
   return (
     <div>
-      {/* <h1>New entry</h1> */}
-      {/* <form onSubmit={handleSubmit}>
-        <label htmlFor="msg">Message</label>
-        <textarea
-          id="msg"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        ></textarea>
-        <button type="submit">Submit</button>
-      </form> */}
+      {/* <h1>Guestbook Entries</h1> */}
       <div id="entries">
         {entries.map((guestbookItem, index) => (
-          <p key={index}>{guestbookItem.message}</p>
+          <div key={index}>
+            {/* <p>
+              Name: {guestbookItem.firstName} {guestbookItem.lastName}
+            </p>
+            <p>{guestbookItem.rekognitionId}</p> */}
+            {/* Display image using rekognitionId */}
+            {/* <ByteToImageConverter imgUrl={guestbookItem.rekognitionId} /> */}
+            {/* <img src={guestbookItem.rekognitionId} alt={`Image ${index}`} /> */}
+            {/* <ByteToImage imgUrl={guestbookItem.rekognitionId} /> */}
+          </div>
         ))}
       </div>
     </div>

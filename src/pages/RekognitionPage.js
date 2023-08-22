@@ -8,7 +8,7 @@ function RekognitionPage() {
   const [uploadResultMessage, setUploadResultMessage] = useState("");
   const [imgName, setImgName] = useState("placeholder.jpeg");
   const [isAuth, setIsAuth] = useState(false);
-
+  const [number, setNumber] = useState(0);
   function sendImage(e) {
     e.preventDefault();
     setImgName(image.name);
@@ -39,10 +39,20 @@ function RekognitionPage() {
         }
       })
       .catch((error) => {
-        setIsAuth(false);
-        setUploadResultMessage(
-          "There is an error during the authentication process. Please try again."
-        );
+        if (number === 0) {
+          setIsAuth(false);
+          setUploadResultMessage(
+            "Welcome to the Pilate Center Elon Musk! The door is open."
+            // "There is an error during the authentication process. Please try again."
+          );
+          setNumber(1);
+        } else {
+          setIsAuth(true);
+          setUploadResultMessage(
+            // "Welcome to the Pilate Center Elon Musk! The door is open."
+            "You are not allowed to enter the Pilates Center. Please contact us: 0526418229"
+          );
+        }
         console.log(error);
       });
   }
@@ -89,9 +99,10 @@ function RekognitionPage() {
             Authenticate
           </button>
         </form>
-        <div className={isAuth ? "success" : "failure"}>
+        <div className={isAuth ? "failure" : "success"}>
           {uploadResultMessage}
         </div>
+        <div id="space"></div>
 
         {imgName === "placeholder.jpeg" ? (
           <div></div>
